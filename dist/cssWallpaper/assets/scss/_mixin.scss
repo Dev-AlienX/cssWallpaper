@@ -1,0 +1,62 @@
+@import 'variables';
+
+@mixin breakpoint($breakpoint, $direction: min) {
+
+    //check if the supplied breakpoint exists in our breakpoits map
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint-values: map-get($breakpoints, $breakpoint);
+        $breakpoint-min: map-get($breakpoint-values, min);
+        $breakpoint-max: map-get($breakpoint-values, max);
+
+        //check if we are writing styles for larger or smaller screens
+        @if $direction ==min {
+            @media (min-width: $breakpoint-min) {
+                @content;
+            }
+        }
+
+        @else {
+            @media (max-width: $breakpoint-max) {
+                @content;
+            }
+        }
+
+        // use the custom value if the breakpoint is not part of the pre-defined list
+    }
+
+    @else {
+
+        @if $direction ==min {
+            @media (min-width: $breakpoint) {
+                @content;
+            }
+        }
+
+        @else {
+            @media (max-width: $breakpoint) {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin box ($h, $w) {
+    width: $w;
+    height: $h;
+}
+
+@mixin fillBox () {
+    @include box(100%, 100%);
+}
+
+@mixin fullScreen {
+    @include box(100vh, 100vw);
+}
+
+@mixin absolute ($t, $r, $b, $l) {
+    position: absolute;
+    top: $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
+}

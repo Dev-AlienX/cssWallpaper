@@ -1,0 +1,14 @@
+.two {
+    background-image: repeating-linear-gradient(45deg, #004C66, #004C66 1em, #008C74 1em, #008C74 50%);
+    background-size: 2em 2em;
+  }
+  
+  .three {
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 1em, #731630 1em, #731630 50%), repeating-linear-gradient(45deg, #40152A, #40152A 1em, #FF5434 1em, #FF5434 50%),;
+    background-size: 3em 3em,2em 2em;
+  }
+  
+  .four {
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 1em, #9E2053 1em, #9E2053 50%), repeating-linear-gradient(45deg, #111626, #111626 1em, #571B3D 1em, #571B3D 50%),;
+    background-size: 3em 3em,2em 2em;
+  }

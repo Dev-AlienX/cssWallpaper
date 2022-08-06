@@ -9,3 +9,11 @@
     --wall1-color4: #00b0a9;
     --wall1-color5: #00f5d7;
 }
+
+body,html {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}

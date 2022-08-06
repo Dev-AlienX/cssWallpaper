@@ -5,6 +5,7 @@
     //check if the supplied breakpoint exists in our breakpoits map
     @if map-has-key($breakpoints, $breakpoint) {
         $breakpoint-values: map-get($breakpoints, $breakpoint);
+        $breakpoint-mini: map-get($breakpoint-values, mini);
         $breakpoint-min: map-get($breakpoint-values, min);
         $breakpoint-max: map-get($breakpoint-values, max);
 
@@ -15,8 +16,14 @@
             }
         }
 
-        @else {
+        @else if $direction ==max {
             @media (max-width: $breakpoint-max) {
+                @content;
+            }
+        }
+
+        @else {
+            @media (min-width: $breakpoint-mini) and (max-width: $breakpoint-max) {
                 @content;
             }
         }
@@ -32,12 +39,19 @@
             }
         }
 
-        @else {
-            @media (max-width: $breakpoint) {
+        @else if $direction ==max {
+            @media (max-width: $breakpoint-max) {
                 @content;
             }
         }
-    }
+
+        @else {
+            @media (min-width: $breakpoint-mini) and (max-width: $breakpoint-max) {
+                @content;
+            }
+        }
+    } 
+
 }
 
 @mixin box ($h, $w) {

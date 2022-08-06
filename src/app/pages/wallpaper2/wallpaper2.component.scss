@@ -1,0 +1,65 @@
+@import '../../../assets/scss/mixin';
+
+.container {
+    @include breakpoint(sm, minmax) {
+        background-image: url(../../../assets/pattern_png/tile_1.png);
+        background-repeat: repeat;
+        background-size: 40px 40px;
+        @include fullScreen();
+        display: block;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        .div1 {
+            filter: drop-shadow(-31px 36px 20px black);
+            @include fillBox();
+            z-index: 2;
+
+            .child {
+                clip-path: polygon(100% 100%, 85% 100%, 26% 53%, 100% 4%);
+                background-color: var(--wall2-color2);
+                @include fillBox();
+                box-shadow: 2px 2px black;
+            }
+
+            @include absolute(0, 0, 0, 0);
+
+        }
+
+
+        .div2 {
+            @include absolute(0, 0, 0, 0);
+            filter: drop-shadow(-31px 36px 20px black);
+            @include fillBox();
+            z-index: 3;
+
+            .child {
+                clip-path: polygon(100% 0, 100% 63%, 80% 68%, 0 15%, 0 0);
+                background-color: var(--wall2-color2);
+                @include fillBox();
+                box-shadow: 2px 2px black;
+                background-image: url(../../../assets/pattern_png/tile_1.png);
+                background-repeat: repeat;
+                background-size: 40px 40px;
+            }
+        }
+
+        .div3 {
+            @include absolute(0, 0, 0, 0);
+            filter: drop-shadow(-31px 36px 20px black);
+            @include fillBox();
+            z-index: 3;
+
+            .child {
+                clip-path: polygon(100% 66%, 54% 36%, 100% 7%);
+                background-color: var(--wall2-color2);
+                @include fillBox();
+                box-shadow: 2px 2px black;
+                background-image: url(../../../assets/pattern_png/tile_1.png);
+                background-repeat: repeat;
+                background-size: 40px 40px;
+            }
+        }
+    }
+}

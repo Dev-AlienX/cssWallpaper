@@ -10,6 +10,7 @@ import { SaveWallpaperComponent } from './component/save-wallpaper/save-wallpape
 import { ActionMenuComponent } from './component/action-menu/action-menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { Wallpaper1Component } from './pages/wallpaper1/wallpaper1.component';
+import { Wallpaper2Component } from './pages/wallpaper2/wallpaper2.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { Wallpaper1Component } from './pages/wallpaper1/wallpaper1.component';
     SaveWallpaperComponent,
     ActionMenuComponent,
     HomeComponent,
-    Wallpaper1Component
+    Wallpaper1Component,
+    Wallpaper2Component
   ],
   imports: [
     BrowserModule,

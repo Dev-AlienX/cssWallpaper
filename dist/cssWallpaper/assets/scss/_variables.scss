@@ -1,22 +1,19 @@
 $breakpoints: (
-    sm: (
+    sm: (mini: 376px,
         min: 576px,
         max: 575.98px,
     ),
-    md: (
+    md: (mini: 576px,
         min: 768px,
-        max: 767.98px
-    ),
-    lg: (
+        max: 767.98px),
+    lg: (mini: 768px,
         min: 992px,
-        max: 991.98px
-    ),
-    xl: (
+        max: 991.98px),
+    xl: (mini: 992px,
         min: 1200px,
-        max: 1199.98px
-    ),
-    xxl: (
-      min: 1400px,
-      max: 1399.98px,
+        max: 1199.98px),
+    xxl: (mini: 1200px,
+        min: 1400px,
+        max: 1399.98px,
     )
 );
